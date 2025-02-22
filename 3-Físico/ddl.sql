@@ -51,18 +51,12 @@ CREATE TABLE IF NOT EXISTS PROPRIETARIO (
 CREATE TABLE IF NOT EXISTS MODELO (
     idModelo INT AUTO_INCREMENT PRIMARY KEY, -- tratamento de 6 digitos será feito pela view.
     nome VARCHAR(50) NOT NULL
-    -- Coluna gerada para exibir o id com 6 dígitos (zeros à esquerda)
-    -- idModeloFormatado CHAR(6) AS (LPAD(idModelo, 6, '0')) VIRTUAL,
-    -- CONSTRAINT chk_id_6digits CHECK (idModelo < 1000000)
 ) AUTO_INCREMENT = 1;
 
 -- Tabela CATEGORIA
 CREATE TABLE IF NOT EXISTS CATEGORIA (
     idCategoria INT AUTO_INCREMENT PRIMARY KEY, -- tratamento de 2 digitos será feito pela view.
     nome VARCHAR(50) NOT NULL
-    -- Coluna gerada para exibir o id com 2 dígitos (zeros à esquerda)
-    -- idCategoriaFormatado CHAR(2) AS (LPAD(idCategoria, 2, '0')) VIRTUAL,
-    -- CONSTRAINT chk_id_2digits CHECK (idCategoria < 100)
 ) AUTO_INCREMENT = 1;
 
 -- Tabela VEICULO
